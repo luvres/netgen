@@ -4,7 +4,7 @@
 
 
 ///
-class MeshOptimize2d
+DLL_HEADER class MeshOptimize2d
 {
   int faceindex;
   int improveedges;
