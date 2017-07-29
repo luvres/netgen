@@ -1,0 +1,24 @@
+diff -uprN netgen-5.3.1.orig/configure netgen-5.3.1.modif/configure
+--- netgen-5.3.1.orig/configure	2014-10-06 08:04:36.000000000 -0300
++++ netgen-5.3.1.modif/configure	2017-07-29 02:26:15.578748448 -0300
+@@ -15352,7 +15352,7 @@ fi
+ 
+ if test a$occon = atrue ; then
+ 
+-	OCCFLAGS="-DOCCGEOMETRY -I$occdir/inc -I/usr/include/opencascade"
++	OCCFLAGS="-DOCCGEOMETRY -I$occdir/include -I$occdir/include/opencascade"
+ 
+ 	OCCLIBS="-L$occdir/lib -lTKernel -lTKGeomBase -lTKMath -lTKG2d -lTKG3d -lTKXSBase -lTKOffset -lTKFillet -lTKShHealing -lTKMesh -lTKMeshVS -lTKTopAlgo -lTKGeomAlgo -lTKBool -lTKPrim -lTKBO -lTKIGES -lTKBRep -lTKSTEPBase -lTKSTEP -lTKSTL -lTKSTEPAttr -lTKSTEP209 -lTKXDESTEP -lTKXDEIGES -lTKXCAF -lTKLCAF -lFWOSPlugin"
+ 
+diff -uprN netgen-5.3.1.orig/configure.ac netgen-5.3.1.modif/configure.ac
+--- netgen-5.3.1.orig/configure.ac	2014-10-06 08:00:17.000000000 -0300
++++ netgen-5.3.1.modif/configure.ac	2017-07-29 02:26:16.495425987 -0300
+@@ -42,7 +42,7 @@ AC_ARG_WITH([occ],
+ 
+ if test a$occon = atrue ; then
+ 
+-	AC_SUBST([OCCFLAGS], ["-DOCCGEOMETRY -I$occdir/inc -I/usr/include/opencascade"])
++	AC_SUBST([OCCFLAGS], ["-DOCCGEOMETRY -I$occdir/include -I$occdir/include/opencascade"])
+ 	AC_SUBST([OCCLIBS], ["-L$occdir/lib -lTKernel -lTKGeomBase -lTKMath -lTKG2d -lTKG3d -lTKXSBase -lTKOffset -lTKFillet -lTKShHealing -lTKMesh -lTKMeshVS -lTKTopAlgo -lTKGeomAlgo -lTKBool -lTKPrim -lTKBO -lTKIGES -lTKBRep -lTKSTEPBase -lTKSTEP -lTKSTL -lTKSTEPAttr -lTKSTEP209 -lTKXDESTEP -lTKXDEIGES -lTKXCAF -lTKLCAF -lFWOSPlugin"])
+ 
+ #  -lTKDCAF
