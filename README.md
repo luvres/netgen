@@ -11,6 +11,11 @@ rm netgen-5.3.1* -fR
 #### Patch in nglib-occt7
 ```
 curl -L https://github.com/FreeCAD/homebrew-freecad/releases/download/0/nglib-occt7.patch | patch -p1
+
+OR
+
+wget https://raw.githubusercontent.com/luvres/netgen/master/nglib-occt7.patch
+patch -p1 nglib-occt7.patch
 ```
 #### occdir and include path
 ```
