@@ -16,4 +16,6 @@ curl -L https://github.com/FreeCAD/homebrew-freecad/releases/download/0/nglib-oc
 ```
 sed -i '/DOCCGEOMETRY/s/\/usr/$occdir/' configure
 sed -i '/DOCCGEOMETRY/s/inc/include/' configure
+sed -i '/DOCCGEOMETRY/s/\/usr/$occdir/' configure.ac
+sed -i '/DOCCGEOMETRY/s/inc/include/' configure.ac
 ```
