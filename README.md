@@ -27,7 +27,7 @@ curl -L https://raw.githubusercontent.com/luvres/netgen/master/occdir.patch | pa
 OR
 
 wget https://raw.githubusercontent.com/luvres/netgen/master/occdir.patch
-patch -p0 < nglib-occt7.patch
+patch -p0 < occdir.patch
 ```
 ##### Occdir patch source
 ```
